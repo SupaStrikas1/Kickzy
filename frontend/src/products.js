@@ -1,21 +1,5 @@
 export const products = [
-  {
-    id: "1",
-    name: "Bacca Bucci® Men's Energy Afterburn Disruptor for Multiple Sports,Fashion, Party & Fun Shoes/Sneakers",
-    description: "",
-    price: 1199,
-    image: [
-      "../src/assets/products/casuals/mens/1/img1.jpg",
-      "../src/assets/products/casuals/mens/1/img2.jpg",
-      "../src/assets/products/casuals/mens/1/img3.jpg",
-      "../src/assets/products/casuals/mens/1/img4.jpg",
-    ],
-    category: "Men",
-    subcategory: "Casuals",
-    sizes: ["6 UK", "7 UK", "8 UK", "9 UK", "10 UK"],
-    date: "",
-    bestseller: false,
-  },
+  
   {
     id: "2",
     name: "Bacca Bucci Men's Sneaker",

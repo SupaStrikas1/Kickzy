@@ -58,7 +58,7 @@ const Collections = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subcategory, search, showSearch]);
+  }, [category, subcategory, search, showSearch,products]);
 
   const sortProduct = () => {
     let fpCopy = filterProducts.slice();
@@ -176,7 +176,7 @@ const Collections = () => {
             <ProductItem
               key={index}
               name={item.name}
-              id={item.id}
+              _id={item._id}
               price={item.price}
               image={item.image}
             />

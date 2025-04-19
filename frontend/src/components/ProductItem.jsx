@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
-const ProductItem = ({id,image,name,price}) => {
+const ProductItem = ({_id,image,name,price}) => {
 
-const {currency} = useContext(ShopContext);
+  const {currency} = useContext(ShopContext);
 
   return (
-    <Link onClick={window.location.reload} className='text-gray-700 cursor-pointer' to={`/product/${id}`}>
+    <Link className='text-gray-700 cursor-pointer' to={`/product/${_id}`}>
         <div className='overflow-hidden h-[230px] flex items-center justify-center'>
             <img className='hover:scale-110 transition ease-in-out' src={image[0]} alt="" />
         </div>
