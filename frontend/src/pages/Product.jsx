@@ -42,7 +42,7 @@ const Product = () => {
               />
             ))}
           </div>
-          <div className="w-[250%] flex items-center justify-center">
+          <div className="sm:w-[250%] flex items-center justify-center">
             <img className="w-full h-auto" src={image} alt="" />
           </div>
         </div>
@@ -63,7 +63,7 @@ const Product = () => {
             <div className="flex gap-2">
               {
                 productData.sizes.map((item,index)=>(
-                  <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item===size ? 'bg-orange-400':''}`} key={index}>{item}</button>
+                  <button onClick={()=>setSize(item)} className={`border py-2 px-2 bg-gray-100 ${item===size ? 'bg-orange-400':''}`} key={index}>{item}</button>
                 ))
               }
             </div>

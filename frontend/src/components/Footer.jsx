@@ -11,9 +11,9 @@ const Footer = () => {
                 </p>
             </div>
 
-            <div>
-                <p className='text-xl font-medium mb-5'>COMPANY</p>
-                <ul className='flex flex-col gap-1 text-gray-600'>
+            <div className='mx-auto'>
+                <p className='text-lg font-medium mb-3'>COMPANY</p>
+                <ul className='flex flex-col gap-1 text-gray-600 text-center'>
                     <li>Home</li>
                     <li>About Us</li>
                     <li>Delivery</li>
@@ -21,9 +21,9 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <div>
-                <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
-                <ul className='flex flex-col gap-1 text-gray-600'>
+            <div className='mx-auto'>
+                <p className='text-lg font-medium mb-3'>GET IN TOUCH</p>
+                <ul className='flex flex-col gap-1 text-gray-600 text-center'>
                     <li>+91 75588534123</li>
                     <li>contact@kickzy.com</li>
                 </ul>

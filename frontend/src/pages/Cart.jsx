@@ -52,7 +52,7 @@ const Cart = () => {
                 />
                 <div>
                   <p className="text-xs sm:text-lg font-medium">
-                    {productData.name}
+                    {productData.name.slice(0,50)}
                   </p>
                   <div className="flex items-center gap-5 mt-2">
                     <p>
@@ -75,7 +75,7 @@ const Cart = () => {
                         Number(e.target.value)
                       )
                 }
-                className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1"
+                className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1 ml-14"
                 type="number"
                 min={1}
                 defaultValue={item.quantity}
