@@ -2,10 +2,11 @@ import React, { useContext, useEffect } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import {useSearchParams} from 'react-router-dom'
 import axios from 'axios'
-import { backendUrl } from '../../../admin/src/App'
 import {toast} from 'react-toastify'
 
 const Verify = () => {
+
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
     const {navigate,token,setCartItems, cartItems}=useContext(ShopContext)
     const [searchParams,setSearchParams]=useSearchParams()
