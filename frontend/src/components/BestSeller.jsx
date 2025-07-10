@@ -9,33 +9,36 @@ const BestSeller = () => {
 
   useEffect(() => {
     const bestProduct = products.filter((item) => item.bestSeller);
-    console.log(bestProduct.slice(0,5));
-    
+    console.log(bestProduct.slice(0, 5));
+
     setBestSeller(bestProduct.slice(0, 5));
   }, [products]);
 
   return (
-    <div className="my-10">
-      <div className="text-center text-3xl py-8">
-        <Title text1={"BEST"} text2={"SELLERS"} />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
-          voluptatum quo nesciunt magnam, illo eum.
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-10 text-3xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <Title text1="BEST" text2="SELLERS" />
+        <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed mt-4">
+          These exceptional shoes have earned their place as customer favorites
+          through outstanding quality, unmatched comfort, and timeless style.
+          Join thousands of satisfied customers who've made these their go-to
+          choice for premium footwear.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
-        {bestSeller.map((item, index) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+        {bestSeller.map((item) => (
           <ProductItem
-            key={index}
+            key={item._id}
             _id={item._id}
             image={item.image}
             name={item.name}
             price={item.price}
+            rating={item.rating}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

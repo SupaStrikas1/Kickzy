@@ -36,7 +36,7 @@ const Cart = () => {
       <div>
         {cartData.map((item, index) => {
           const productData = products.find(
-            (product) => product._id === item._id
+            (product) => product._id === item._id,
           );
 
           return (
@@ -52,7 +52,7 @@ const Cart = () => {
                 />
                 <div>
                   <p className="text-xs sm:text-lg font-medium">
-                    {productData.name.slice(0,50)}
+                    {productData.name.slice(0, 50)}
                   </p>
                   <div className="flex items-center gap-5 mt-2">
                     <p>
@@ -72,7 +72,7 @@ const Cart = () => {
                     : updateQuantity(
                         item._id,
                         item.size,
-                        Number(e.target.value)
+                        Number(e.target.value),
                       )
                 }
                 className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1 ml-14"

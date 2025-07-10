@@ -7,11 +7,11 @@ import RelatedProducts from "../components/RelatedProducts";
 const Product = () => {
   const { productId } = useParams();
   console.log(productId);
-  
+
   const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
-  const [size, setSize] = useState('');
+  const [size, setSize] = useState("");
 
   const fetchProductData = async () => {
     products.map((item) => {
@@ -57,18 +57,30 @@ const Product = () => {
             <IoStarOutline className="w-5" />
             <p className="pl-2">(127)</p>
           </div>
-          <p className="mt-5 text-3xl font-medium">{currency}{productData.price}</p>
+          <p className="mt-5 text-3xl font-medium">
+            {currency}
+            {productData.price}
+          </p>
           <div className="flex flex-col gap-4 my-8">
             <p>Select Size</p>
             <div className="flex gap-2">
-              {
-                productData.sizes.map((item,index)=>(
-                  <button onClick={()=>setSize(item)} className={`border py-2 px-2 bg-gray-100 ${item===size ? 'bg-orange-400':''}`} key={index}>{item}</button>
-                ))
-              }
+              {productData.sizes.map((item, index) => (
+                <button
+                  onClick={() => setSize(item)}
+                  className={`border py-2 px-2 bg-gray-100 ${item === size ? "bg-orange-400" : ""}`}
+                  key={index}
+                >
+                  {item}
+                </button>
+              ))}
             </div>
           </div>
-          <button onClick={()=>addToCart(productData._id,size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
+          <button
+            onClick={() => addToCart(productData._id, size)}
+            className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700"
+          >
+            ADD TO CART
+          </button>
           <hr className="mt-8 sm:w-4/5" />
           <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1">
             <p>100% Original Product</p>
@@ -78,7 +90,11 @@ const Product = () => {
         </div>
       </div>
 
-      <RelatedProducts category={productData.category} subCategory={productData.subCategory} _id={productData._id} />
+      <RelatedProducts
+        category={productData.category}
+        subCategory={productData.subCategory}
+        _id={productData._id}
+      />
     </div>
   ) : (
     <div className="opacity-0"></div>

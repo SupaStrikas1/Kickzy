@@ -1,5 +1,4 @@
 export const products = [
-  
   {
     id: "2",
     name: "Bacca Bucci Men's Sneaker",
